@@ -1,0 +1,44 @@
+nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--white-clr);
+    box-shadow: var(--boxShadow);
+    padding: .2em 0em;
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+  }
+  
+  .header-brand-name{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--black-clr);
+    cursor: pointer;
+  }
+  
+  .header-brand-icon{
+    font-size: 1.2em;
+    color: var(--orange-clr);
+  }
+  
+  .menu-item-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .menu-item{
+    margin: 2rem;
+    color: var(--black-clr);
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .menu-item:hover{
+    color: var(--orange-clr);
+  }
+  

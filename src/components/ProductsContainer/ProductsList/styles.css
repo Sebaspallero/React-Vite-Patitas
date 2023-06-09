@@ -1,0 +1,8 @@
+.productsBox{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em 3em 8em;
+}

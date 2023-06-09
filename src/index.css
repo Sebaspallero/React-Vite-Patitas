@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  text-decoration: none;
+  list-style: none;
+  transition: .2s linear;
+  font-family: 'poppins';
+  scroll-behavior: smooth;
+  scroll-padding-top:4rem;
+  margin: 0;
+}
+
+:root {
+  --orange-clr: #e67e22;
+  --black-clr: #130f40;
+  --white-clr: #fff;
+  --light-clr:#666;
+  --light-bck:#eee;
+  --border: .2rem solid #130f40;
+  --border-white: .2rem solid #ffffff;
+  --boxShadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--orange-clr);
+  border-radius: 10px;
+}
+
+.section-title{
+  font-size: 2em;
+  color: var(--black-clr);
+  padding-bottom: 1.5em;
+}
+
+.title-accent{
+  color: var(--orange-clr);
+}
+
+.link{
+  margin-top: 1rem;
+  padding: .6rem 2rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0rem;
+  cursor: pointer;
+  background:none;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  border: var(--border);
+  color: var(--black-clr);
+}
+
+.link:hover{
+  background-color: var(--black-clr);
+  color: var(--light-bck);
+
+}
+

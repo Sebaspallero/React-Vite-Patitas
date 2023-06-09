@@ -1,0 +1,39 @@
+.itemBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.ItemImgBox{
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.itemImg{
+    height: 450px;
+    width: 350px;
+    border-radius: 5px;
+    transition: .5s;
+}
+  
+.itemImg:hover{
+    transform: scale(1.1);
+}
+
+.itemTitle{
+    margin-top: .5em;
+    margin-bottom: .5em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--black-clr);
+    text-align: center;
+    width: 300px;
+}
+
+.itemPrice{
+    font-size: 1.2rem;
+    color: var(--orange-clr);
+    text-align: center;
+}
