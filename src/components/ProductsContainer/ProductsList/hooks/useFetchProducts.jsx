@@ -10,6 +10,7 @@ export const useFetchProducts = () => {
   const dispatch = useDispatch()
   const {category} = useParams()
   const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
   const products = useSelector((state) => state.products.productsList)
 
     useEffect(()=>{
@@ -19,25 +20,22 @@ export const useFetchProducts = () => {
                 const ProductCategory = query(productsCollectRef, where('category', '==', category))
                 getDocs(ProductCategory)
                     .then(res => dispatch(setProductsOnContext(res.docs.map((doc) => ({...doc.data(), id: doc.id})))))
-                    setTimeout(()=>{
-                        setLoading(false)
-                    },500)
+                    .finally(setTimeout(()=> setLoading(false), 500))
             }
             else{
                 setLoading(true)
                 getDocs(productsCollectRef)
                     .then(res => dispatch(setProductsOnContext(res.docs.map((doc) => ({...doc.data(), id: doc.id})))))
-                    setTimeout(()=>{
-                        setLoading(false)
-                    },500)
+                    .finally(setTimeout(()=> setLoading(false), 500))
             }
         } catch (err) {
-            console.log(err)
+            setError(err)
         }
     }, [category]) 
 
     return {
         products,
-        loading
+        loading,
+        error
     }
   }
