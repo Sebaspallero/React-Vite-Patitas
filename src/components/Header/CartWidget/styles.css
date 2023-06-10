@@ -1,0 +1,21 @@
+.cartIcon{
+    font-size: 1.5em;
+    color:var(--black-clr);
+    cursor: pointer;
+  }
+  
+  .cartIcon:hover{
+    color: var(--orange-clr);
+  }
+
+  .cartLengthIcon{
+    height: 25px;
+    width: 25px;
+    background-color: var(--orange-clr);
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    color: var(--white-clr);
+    position: absolute;
+    top: 15%;
+  }

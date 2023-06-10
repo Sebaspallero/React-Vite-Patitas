@@ -10,12 +10,12 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <a to='/' className="header-brand-name"><FontAwesomeIcon className="header-brand-icon" icon={faPaw} /> Patitas</a>
+          <Link to='/' className="header-brand-name"><FontAwesomeIcon className="header-brand-icon" icon={faPaw} /> Patitas</Link>
           <ul className="menu-item-list">
-            <a to='/' className="menu-item">HOME</a>
-            <a to='/' className="menu-item">NOSOTROS</a>
-            <a to='/' className="menu-item">PRODUCTOS</a>
-            <a to='/' className="menu-item">CONTACTO</a>
+            <Link to='/' className="menu-item">HOME</Link>
+            <Link to='/' className="menu-item">NOSOTROS</Link>
+            <Link to='/' className="menu-item">PRODUCTOS</Link>
+            <Link to='/' className="menu-item">CONTACTO</Link>
           </ul>
           <CartWidget/>
         </nav>

@@ -1,0 +1,77 @@
+.checkOutBox{
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--boxShadow);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-bottom: 5em;
+    height: fit-content;
+}
+
+.checkOutForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.checkOutTittle{
+    font-size: 1.2rem;
+    margin-bottom: .5em;
+    color: var(--black-clr);
+}
+
+.checkOutTittleAccent{
+    color: var(--orange-clr);
+}
+
+.checkOutQuantity{
+    color: var(--black-clr);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.checkOutInput{
+    width: 25em;
+    border: none;
+    border-bottom: 0.2rem solid #130f40;
+    border-width: .1rem;
+    font-size: .8em;
+    text-transform: none;
+    color: #130f40;
+    padding: 1.2rem 0;
+    margin: .5rem 0;
+    outline: none;
+}
+
+.btnsCheckOutBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5.3em;
+}
+
+.cartDeleteAll{
+    color: var(--black-clr);
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-top: .6em;
+  }
+
+  .cartDeleteAll:hover{
+    color: red;
+  }
+
+
+.cartTotal{
+    color: var(--black-clr);
+    font-size: 1.2em;
+    margin: 1em 0em 1em;
+    text-align: right;
+  }
+
+  .alertTitle{
+    color: var(--black-clr);
+  }
+
+  .alertText{
+    color: var(--light-clr);
+  }

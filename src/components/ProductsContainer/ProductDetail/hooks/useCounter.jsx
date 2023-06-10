@@ -19,7 +19,8 @@ export const useCounter = () =>{
 
     const addQuantity = (quantity, product) => {
         setGoToCart(true)
-        dispatch(addProduct([{quantity, product}])) 
+        let data = {quantity: quantity, product: product}
+        dispatch(addProduct(data)) 
     }
 
       return{
