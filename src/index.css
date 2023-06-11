@@ -51,18 +51,21 @@
   border-radius: 5rem;
   border-top-left-radius: 0rem;
   cursor: pointer;
-  background:none;
   font-size: 1rem;
   position: relative;
   overflow: hidden;
   width: fit-content;
   border: var(--border);
   color: var(--black-clr);
+
+  background: linear-gradient(to right, var(--black-clr) 50%, rgba(255,0,0,0) 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
 }
 
 .link:hover{
-  background-color: var(--black-clr);
   color: var(--light-bck);
-
+  background-position: left bottom;
 }
 

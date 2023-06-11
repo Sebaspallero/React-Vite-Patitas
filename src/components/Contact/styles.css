@@ -1,0 +1,51 @@
+.contactBox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.contactImg{
+    width: 700px;
+    height: 600px;
+}
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formInput{
+    width: 30em;
+    border: none;
+    border-bottom: 0.2rem solid #130f40;
+    border-width: .1rem;
+    font-size: 1rem;
+    text-transform: none;
+    color: #130f40;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    outline: none;
+    resize: none;
+}
+
+.contactFormBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 5em;
+}
+
+.titleSectionAbout{
+    font-size: 2em;
+    color: var(--black-clr);
+    padding-bottom: 1.5em;
+  }
+  
+  .titleAccent{
+    color: var(--orange-clr);
+  }
+
+  

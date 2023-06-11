@@ -33,7 +33,7 @@ const CartWindow = ({cartView}) => {
                         </div>
                       )})}
                       <p style={{marginBottom:'30px'}}>Total: ${total}</p>
-                      <Link to={'/cart'} className='link' >Finalizar Compra</Link>
+                      <Link to={'/cart'} className='link'>Finalizar Compra</Link>
                       <FontAwesomeIcon onClick={()=>dispatch(clearCart())} className='cartViewDeleteAll' icon={faTrash} />
                 </div>
                 : <p className='cartMsgEmpty'>Tu Carrito está Vacío</p>

@@ -16,7 +16,7 @@ const {handleCart, cartView} = UseHandleCart()
     <div onClick={handleCart}><FontAwesomeIcon className='cartIcon' icon={faShoppingCart} />
         {cart.length > 0 ? <span className='cartLengthIcon'>{cart.length}</span> : null}
     </div>
-    {cartView ? <CartWindow cartView={cartView}/> : null}
+    {cartView ? <CartWindow/> : null}
     </>
   )
 }
