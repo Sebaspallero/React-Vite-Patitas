@@ -1,11 +1,10 @@
 import "./styles.css"
 
 const FormInput = (props) => {
-    const {placeholder, name, onChange} = props
-
+const {placeholder, name, onChange, className} = props
   return (
     <div>
-        <input placeholder={placeholder} onChange={onChange} name={name} className="checkOutInput"/>
+        <input placeholder={placeholder} onChange={onChange} name={name} className={className}/>
     </div>
   )
 }

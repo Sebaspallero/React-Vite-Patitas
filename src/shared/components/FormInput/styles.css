@@ -10,3 +10,17 @@
     margin: .5rem 0;
     outline: none;
 }
+
+.contactInput{
+    width: 30em;
+    border: none;
+    border-bottom: 0.2rem solid #130f40;
+    border-width: .1rem;
+    font-size: 1rem;
+    text-transform: none;
+    color: #130f40;
+    padding: 1.5rem 0;
+    margin: 1rem 0;
+    outline: none;
+    resize: none;
+}

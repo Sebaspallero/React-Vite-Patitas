@@ -22,6 +22,7 @@ const CartForm = () => {
                   key={input.id} 
                   {...input} 
                   onChange={handleOnChange} 
+                  className={'checkOutInput'}
                 />
               ))
             }

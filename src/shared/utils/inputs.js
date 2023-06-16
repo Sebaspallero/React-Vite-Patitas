@@ -21,3 +21,20 @@ export const cartInputs = [
         label: 'Teléfono'
     }
 ]
+
+export const contactInputs = [
+    {
+        id: 1,
+        name: 'name',
+        type: 'text',
+        placeholder: 'Nombre Completo',
+        label: 'Nombre Completo'
+    },
+    {
+        id: 2,
+        name: 'email',
+        type: 'email',
+        placeholder: 'E-mail',
+        label: 'Email'
+    }
+]

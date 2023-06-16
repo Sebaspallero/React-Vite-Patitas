@@ -1,38 +1,13 @@
-import {useState} from 'react'
 import contact from '../../assets/contact.png'
+import FormInput from '../../shared/components/FormInput/FormInput'
+import { contactInputs } from '../../shared/utils/inputs'
+import { useSubmit } from './hooks/useSubmit'
 import './styles.css'
-
-// Firebase
-import { collection, addDoc } from "firebase/firestore";
-import { db } from '../../firebase/firebase'
 
 const Contact = () => {
 
-  const initialState={
-    name:'',
-    email:'',
-    message:'',
-  }
-
-  const [values, setValues] = useState(initialState);
-
-  const OnChange = (e) => {
-		const { value, name } = e.target;
-		setValues({ ...values, [name]: value });
-	};
-
-	const onSubmit = async (e) => {
-		e.preventDefault();
-    if(values.name && values.email && values.message !== ''){
-        await addDoc(collection(db, 'messages'), {
-        values,
-      });
-      alert('mensaje enviado')
-    }
-    else{
-      alert('debes completar todos los campos')
-    }
-	};
+  const inputs = contactInputs
+  const {onChange, handleSubmit} = useSubmit()
   
   return (
     <div className='contactBox'>
@@ -41,30 +16,21 @@ const Contact = () => {
         </div>
         <div className='contactFormBox'>
             <h2 className='titleSectionAbout'>Contacto</h2>
-            <form className='contactForm' onSubmit={onSubmit}>
-                <input
-                  onChange={OnChange}
-                  type='text' 
-                  name='name'
-                  placeholder='Su Nombre' 
-                  className='formInput'>
-                 </input>
-                <input
-                  onChange={OnChange}
-                  type='email' 
-                  name='email'
-                  placeholder='Su E-mail' 
-                  className='formInput'>
-                </input>
+            <form className='contactForm'>
+              {
+                inputs.map((input) => (
+                  <FormInput key={input.id} {...input}  onChange={onChange} className={'contactInput'}  />
+                ))
+              }
                 <textarea
-                  onChange={OnChange}
+                  onChange={onChange}
                   type='text'
                   name='message' 
                   placeholder='Su Mensaje' 
                   className='formInput' 
                   rows="5">
                 </textarea>
-                <button className='link'>Enviar Mensaje</button>
+                <button className='link' onClick={handleSubmit}>Enviar Mensaje</button>
             </form>
         </div>
     </div>
