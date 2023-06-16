@@ -3,7 +3,7 @@ import { faXmark, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { deleteProduct } from '../../context/cartSlice'
-/* import CheckOut from '../../components/CheckOut/CheckOut' */
+import CartForm from './CartForm/CartForm'
 import { Link } from 'react-router-dom'
 import './styles.css'
 
@@ -34,7 +34,7 @@ const Cart = () => {
                   <Link to={'/'} className='backBtn'><FontAwesomeIcon icon={faArrowLeft}/>Volver Atrás</Link>
                 </div>
           </div>
-          {/* <CheckOut/> */}
+          <CartForm/>
         </div>
            : 
         <div className='emptyCartBox'>

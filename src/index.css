@@ -59,7 +59,7 @@
   color: var(--black-clr);
 
   background: linear-gradient(to right, var(--black-clr) 50%, rgba(255,0,0,0) 50%);
-  background-size: 200% 100%;
+  background-size: 200% 90%;
   background-position: right bottom;
   transition: all .5s ease-out;
 }

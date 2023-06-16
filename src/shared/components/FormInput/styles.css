@@ -1,0 +1,12 @@
+.checkOutInput{
+    width: 25em;
+    border: none;
+    border-bottom: 0.2rem solid #130f40;
+    border-width: .1rem;
+    font-size: .8em;
+    text-transform: none;
+    color: #130f40;
+    padding: 1.2rem 0;
+    margin: .5rem 0;
+    outline: none;
+}
