@@ -14,8 +14,7 @@
 .contactInput{
     width: 30em;
     border: none;
-    border-bottom: 0.2rem solid #130f40;
-    border-width: .1rem;
+    border-bottom: 0.1rem solid #130f40;
     font-size: 1rem;
     text-transform: none;
     color: #130f40;
@@ -23,4 +22,21 @@
     margin: 1rem 0;
     outline: none;
     resize: none;
+}
+
+.error-message{
+    font-size: .8rem;
+    color: red;
+    padding: 3px;
+    display: block;
+    width: 300px;
+    display: none;
+}
+
+input:invalid[focused="true"] ~ .error-message{
+    display: block;
+}
+
+input:invalid[focused="true"]{
+    border-bottom: 0.1rem solid red;
 }

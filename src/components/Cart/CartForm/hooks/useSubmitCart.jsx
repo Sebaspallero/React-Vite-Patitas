@@ -12,6 +12,10 @@ export const useSubmitCart = () =>{
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
+    const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validNameRegex = /^[0-9]{5,20}$/
+    const validPhoneRegex = /^[A-Za-z]{2,16}$/
+
     const emptyCart = () =>{
         dispatch(clearCart())
     }
@@ -34,7 +38,7 @@ export const useSubmitCart = () =>{
 
     const handleSubmit = async (e) => {
 		e.preventDefault();
-    if(values.name && values.email && values.phone !== ''){
+    if(values.name.match(validNameRegex) && values.email.match(validEmailRegex) && values.phone.match(validPhoneRegex)){
       await addDoc(collection(db, 'purchases'), {
         values,
       });
@@ -43,7 +47,7 @@ export const useSubmitCart = () =>{
       dispatch(clearCart())
     }
     else{
-      alert('Todos los campos deben ser completados')
+      alert('Por favor revise todos los campos')
     }
 	};
 
