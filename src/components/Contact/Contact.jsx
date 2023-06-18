@@ -10,7 +10,7 @@ const Contact = () => {
   const {onChange, handleSubmit} = useSubmit()
   
   return (
-    <div className='contactBox'>
+    <div className='contactBox' id='contacto'>
         <div>
             <img src={contact} alt='Imagen Contacto' className='contactImg'></img>
         </div>
@@ -27,8 +27,8 @@ const Contact = () => {
                   type='text'
                   name='message' 
                   placeholder='Su Mensaje' 
-                  className='formInput' 
-                  rows="5">
+                  className='msg-input' 
+                  rows="3">
                 </textarea>
                 <button className='link' onClick={handleSubmit}>Enviar Mensaje</button>
             </form>

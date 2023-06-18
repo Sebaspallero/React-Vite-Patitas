@@ -20,6 +20,7 @@ const {add, addQuantity, substract, quantity} = useCounter()
                         <button className='btn-counter' onClick={add}>+</button>
                 </div>
             </div>
+            {/* <p className='itemTitleDescription'>DESCRIPCIÓN</p> */}
             <p className='ietmDetailDescription'>{product.description}</p>
             <div className='counterBox'>
                 <button onClick={() => addQuantity(quantity, product)} className='link'>Agregar al carrito</button>

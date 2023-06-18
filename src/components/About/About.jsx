@@ -4,7 +4,7 @@ import './styles.css'
 
 const About = () => {
   return (
-    <div className='about-box'>
+    <div className='about-box' id='nosotros'>
         <img className='about-img' src={AboutImg} alt='imagen sobre nosotros'></img>
         <div className='about-info-box'>
             <h2 className='section-title'>Sobre <span className='title-accent'>Nosotros</span></h2>

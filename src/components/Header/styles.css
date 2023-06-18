@@ -4,9 +4,9 @@ nav{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    padding: 1em 0em;
     background-color: var(--white-clr);
     box-shadow: var(--boxShadow);
-    padding: .2em 0em;
     position: fixed;
     top:0; left:0; right:0;
     z-index: 1000;
@@ -32,7 +32,7 @@ nav{
   }
   
   .menu-item{
-    margin: 2rem;
+    margin: .5em 2em .5em 2em;
     color: var(--black-clr);
     cursor: pointer;
     font-weight: 500;

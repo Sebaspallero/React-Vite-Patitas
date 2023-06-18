@@ -23,11 +23,18 @@ export const useCounter = () =>{
         dispatch(addProduct(data)) 
     }
 
+    const addOneQuantity = (product) => {
+        setQuantity(quantity +1)
+        let data = {quantity, product: product}
+        dispatch(addProduct(data))
+    }
+
       return{
         quantity,
         add,
         substract,
         addQuantity,
+        addOneQuantity,
         goToCart
       }
 }

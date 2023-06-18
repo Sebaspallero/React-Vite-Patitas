@@ -13,8 +13,8 @@ export const useSubmitCart = () =>{
     const dispatch = useDispatch()
 
     const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const validNameRegex = /^[0-9]{5,20}$/
-    const validPhoneRegex = /^[A-Za-z]{2,16}$/
+    const validPhoneRegex = /^[0-9]{5,20}$/
+    const validNameRegex = /^[A-Za-z]{2,16}$/
 
     const emptyCart = () =>{
         dispatch(clearCart())

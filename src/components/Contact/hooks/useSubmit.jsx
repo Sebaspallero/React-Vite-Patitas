@@ -11,6 +11,10 @@ export const useSubmit = () =>{
     }
 
     const [values, setValues] = useState(initialState);
+    const validEmailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    const validMessageRegex = /^[A-Za-z]{2,150}$/
+    const validNameRegex = /^[A-Za-z]{2,16}$/
+    
     
     const onChange = (e) => {
 		const { value, name } = e.target;
@@ -19,14 +23,14 @@ export const useSubmit = () =>{
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-    if(values.name && values.email && values.message !== ''){
+    if(values.name.match(validNameRegex) && values.email.match(validEmailRegex) && values.message.match(validMessageRegex)){
         await addDoc(collection(db, 'messages'), {
         values,
       });
       alert('mensaje enviado')
     }
     else{
-      alert('debes completar todos los campos')
+      alert('Revisa todos los campos')
     }
 	};
 

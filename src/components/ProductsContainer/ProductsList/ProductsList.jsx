@@ -1,5 +1,4 @@
 import { useFetchProducts } from './hooks/useFetchProducts'
-import { Link } from 'react-router-dom'
 import Spinner from '../../../shared/components/Spinner/Spinner'
 import Product from '../Product/Product'
 import './styles.css'
@@ -16,9 +15,7 @@ const {products, loading, error} = useFetchProducts()
       return(
       <div key={product.id}>
         {/* ARREGLAR CATEGORIA DE GATOS */}
-        <Link to={`/item/${product.id}`}>
           <Product data={product}/>
-        </Link>  
       </div>)  
     })}
     </div>}

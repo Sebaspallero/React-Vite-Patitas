@@ -1,14 +1,18 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 
 export const UseHandleCart = () =>{
 
     const [cartView, setCartView] = useState(false)
+
     const handleCart = ()=> {
-        setCartView(!cartView)
+        setTimeout(()=>{
+            setCartView(!cartView)
+        },100)
+       
     }
 
     return{
-        handleCart,
         cartView,
+        handleCart
     }
 }

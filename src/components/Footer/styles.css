@@ -22,11 +22,17 @@
     width: fit-content;
     border: var(--border-white);
     color: var(--white-clr);
+
+    background: linear-gradient(to right, var(--white-clr) 50%, rgba(255,0,0,0) 50%);
+    background-size: 200% 90%;
+    background-position: right bottom;
+    transition: all .4s ease-out;
 }
 
 .socialItem:hover{
     background-color: var(--white-clr);
     color: var(--black-bck);
+    background-position: left bottom;
 }
 
 .custom-shape-divider-bottom-1662601485 {

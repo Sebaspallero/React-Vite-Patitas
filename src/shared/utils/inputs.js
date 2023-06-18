@@ -13,7 +13,7 @@ export const cartInputs = [
         type: 'email',
         placeholder: 'E-mail',
         errorMessage: 'Debe ser un E-mail válido.',
-        patter: "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+        pattern: "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
     },
     {
         id: 3,
@@ -30,14 +30,16 @@ export const contactInputs = [
         id: 1,
         name: 'name',
         type: 'text',
-        placeholder: 'Nombre Completo',
-        label: 'Nombre Completo'
+        placeholder: 'Nombre',
+        errorMessage: 'El nombre debe tener entre 3-16 caracteres, y no incluir ningún carácter especial.',
+        pattern: "^[A-Za-z]{2,16}$"
     },
     {
         id: 2,
         name: 'email',
         type: 'email',
         placeholder: 'E-mail',
-        label: 'Email'
+        errorMessage: 'Debe ser un E-mail válido.',
+        pattern: "^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" 
     }
 ]
