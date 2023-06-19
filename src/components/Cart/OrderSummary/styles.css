@@ -1,49 +1,137 @@
-.cartProductsBox{
+.order-summary-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: var(--white-clr);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin-right: 5%;
+    border: solid 2px var(--light-bck);
+    box-shadow: var(--boxShadow);
 }
 
-.cartProducts{
-    margin-bottom: 3em;
-  }
+.order-summary-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: .5em;
+}
+
+.order-summary-title{
+  font-size: 1.1em;
+  color: var(--black-clr);
+}
+
+.order-summary-title span{
+  color: var(--orange-clr);
+}
+
+.ball-divider{
+  height: 5px;
+  width: 5px;
+  background-color: var(--orange-clr);
+  border-radius: 50%;
+}
+
+.checkOutQuantity{
+  color: var(--black-clr);
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline;
+}
+
+.divider{
+  height: 1px;
+  width: 90%;
+  background-color: var(--light-bck);
+  margin: 1em 0em;
+}
+
+.cart-products{
+  overflow-y: scroll;
+  overflow-x:hidden;
+  height: 300px;
+}
 
   .cartProduct{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4em;
+    gap: 2em;
     margin-bottom: 1em;
+    
   }
 
   .cartImg{
-    width: 130px;
-    height: 170px;
+    width: 90px;
+    height: 120px;
     border-radius: 5px;
   }
 
-  .cartText{
-    text-align: center;
-    color: var(--black-clr);
-    font-size: 1em;
-    max-width: 150px;
+  .cart-product-info{
+    display: flex;
+    flex-direction: column;
+    
   }
 
-  .titleAccent{
-    color: var(--orange-clr);
+  .cart-product-title{
+    font-size: 1em;
+    color: var(--black-clr);
+    font-weight: bold;
+    width: 170px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cart-product-price-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5em;
+  }
+
+  .cart-product-price{
+    font-size: 1em;
+    color: var(--black-clr);
+  }
+
+  .quantity-icon{
+    color: var(--black-clr);
+    font-size: 1em;
+  }
+
+  .cart-product-quantity{
+    color: var(--black-clr);
+    font-size: 1em;
   }
 
   .cartDeleteBtn{
-    font-size: 2em;
-    color: red;
+    font-size: 1.5em;
+    color: rgb(211, 40, 40);
     cursor: pointer;
   }
   
   .cartDeleteBtn:hover{
     transform: scale(1.1);
   }
+
+  .fees-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+  .fees-box p{
+    color: var(--black-clr);
+    font-size: 1em;
+  }
   
   .backBtn{
     color: var(--black-clr);
+    width: fit-content;
+    margin: 1em 0em
   }

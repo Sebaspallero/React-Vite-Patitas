@@ -1,20 +1,22 @@
 .checkOutBox{
     display: flex;
     flex-direction: column;
-    box-shadow: var(--boxShadow);
-    border-radius: 10px;
-    padding: 1.5em;
-    margin-bottom: 5em;
-    height: fit-content;
 }
 
 .checkOutForm{
     display: flex;
     flex-direction: column;
+    box-shadow: var(--boxShadow);
+    border-radius: 10px;
+    padding: 1.5em;
+    height: fit-content;
+    border: solid 2px var(--light-bck);
+    width: 80%;
+    margin: auto;
 }
 
 .checkOutTittle{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: .5em;
     color: var(--black-clr);
 }
@@ -23,14 +25,16 @@
     color: var(--orange-clr);
 }
 
-.checkOutQuantity{
-    color: var(--black-clr);
-    font-weight: bold;
-    font-size: 1rem;
+.form-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .checkOutInput{
-    width: 25em;
+    width: 20em;
     border: none;
     border-bottom: 0.2rem solid #130f40;
     border-width: .1rem;
@@ -66,12 +70,4 @@
     font-size: 1.2em;
     margin: 1em 0em 1em;
     text-align: right;
-  }
-
-  .alertTitle{
-    color: var(--black-clr);
-  }
-
-  .alertText{
-    color: var(--light-clr);
   }

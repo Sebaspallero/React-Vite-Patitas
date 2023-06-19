@@ -19,3 +19,110 @@
     position: absolute;
     top: 10%;
   }
+
+  .cartViewTextBox{
+    display: flex;
+    flex-direction: column;
+    gap: .1em;
+  }
+
+  .cart-view-product-title{
+    font-size: .9em;
+    text-align: left;
+    font-weight: bold;
+    width: 150px;
+    color: var(red);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .cart-view-product-price{
+    font-size: 1em;
+    color: var(--black-clr);
+  }
+
+  .quantity-icon{
+    color: var(--black-clr);
+    font-size: 1em;
+  }
+
+  .cart-view-product-quantity{
+    color: var(--black-clr);
+    font-size: 1em;
+  }
+
+  .cart-window-box{
+    position: absolute;
+    top: -40%;
+    right: 2%;
+    margin-top: 10em;
+    background-color: var(--white-clr);
+    width: 380px;
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: var(--boxShadow);
+    color: var(--black-clr);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    border: solid 2px var(--light-bck);
+  }
+
+  .cartView{
+    padding: 1.5em;
+    gap: 1em;
+  }
+
+  .cartViewProduct{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  .cartViewImg{
+    width: 80px;
+    height: 100px;
+    border-radius: 5px;
+  }
+
+  .cartViewTextBox{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+  }
+
+
+  .titleAccent{
+    color: var(--orange-clr);
+  }
+
+  .cartViewDeleteBtn{
+    font-size: 1.5em;
+    color: red;
+    cursor: pointer;
+  }
+
+  .cartViewDeleteBtn:hover{
+    transform: scale(1.2);
+  }
+
+  .cartMsgEmpty{
+    margin: 5em 4.5em 1em;
+  }
+
+  .cartViewDeleteAll{
+    color: var(--black-clr);
+    font-size: 1.5em;
+    margin-left: 3.5em;
+    cursor: pointer;
+  }
+
+  .cartViewDeleteAll:hover{
+    color: red;
+  }

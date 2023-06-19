@@ -1,9 +1,11 @@
 .cartBox{
-  margin-top: 10%;
+  margin-top: 8%;
+  margin-bottom: 5%;
 }
 
 .titleSection{
-    /* margin: 8em 4.9em 3em; */
+    margin-bottom: 2em;
+    margin-left: 7em;
     font-size: 1.5em;
     color: var(--black-clr);
   }
@@ -11,9 +13,6 @@
   .titleAccent{
     color: var(--orange-clr);
   }
-  
-
-  
   
   .emptyCartBox{
     display: flex;
@@ -32,7 +31,7 @@
   .cartFormFlex{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    gap: 5%;
     align-items:flex-start;
   }
 

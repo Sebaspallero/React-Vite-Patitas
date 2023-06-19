@@ -1,24 +1,25 @@
 import FormInput from '../../../shared/components/FormInput/FormInput';
 import { cartInputs } from '../../../shared/utils/inputs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash} from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 import { useSubmitCart } from './hooks/useSubmitCart';
+import { Link } from 'react-router-dom';
 import './styles.css'
 
 
 const CartForm = () => {
 
   const inputs = cartInputs
-  const {cart, total, handleOnChange, handleSubmit, emptyCart} = useSubmitCart()
+  const {handleOnChange, handleSubmit} = useSubmitCart()
 
   return (
     <div className='checkOutBox'>
-        <h2 className='checkOutTittle'>Check <span className='checkOutTittleAccent'>Out</span></h2>
-        <p className='checkOutQuantity'>Items {cart.length}</p>
         <form className='checkOutForm'>
+          <h2 className='checkOutTittle'>Información de <span className='checkOutTittleAccent'>Envío</span></h2>
+          <div className='form-flex'>
             {
               inputs.map((input) => (
-                <FormInput 
+                  <FormInput 
                   key={input.id} 
                   {...input} 
                   onChange={handleOnChange} 
@@ -26,12 +27,12 @@ const CartForm = () => {
                 />
               ))
             }
-            <p className='cartTotal'>Total: ${total}</p>
+            </div>
             <div className='btnsCheckOutBox'>
-                <button type='submit' className='link' onClick={handleSubmit}>Terminar Compra</button>
-                <FontAwesomeIcon onClick={emptyCart} className='cartDeleteAll' icon={faTrash}/>
+                <button type='submit' className='link' onClick={handleSubmit}>Confirmar Compra</button>
             </div>
         </form>
+        <Link to={'/'} className='backBtn'><FontAwesomeIcon icon={faArrowLeft}/> Home</Link>
     </div>
   )
 }

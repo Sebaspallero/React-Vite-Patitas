@@ -22,7 +22,31 @@ export const cartInputs = [
         placeholder: 'Teléfono',
         errorMessage: 'Debe ser un teléfono válido.',
         pattern: "^[0-9]{5,20}$"
-    }
+    },
+    {
+        id: 4,
+        name: 'city',
+        type: 'text',
+        placeholder: 'Ciudad',
+        errorMessage: 'Debe completar este campo.',
+        pattern: "^[A-Za-z]{1,40}$"
+    },
+    {
+        id: 5,
+        name: 'state',
+        type: 'text',
+        placeholder: 'Provincia',
+        errorMessage: 'Debe completar este campo',
+        pattern: "^[A-Za-z]{1,40}$"
+    },
+    {
+        id: 6,
+        name: 'address',
+        type: 'text',
+        placeholder: 'Dirección',
+        errorMessage: 'Debe completar este campo',
+        pattern: "^[A-Za-z0-9]{1,40}$"
+    },
 ]
 
 export const contactInputs = [

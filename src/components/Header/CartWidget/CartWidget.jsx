@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faXmark, faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useSelector } from 'react-redux'
 import { UseHandleCart } from './hooks/useHandleCart'
-import CartWindow from './CartWindow/CartWindow'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { deleteProduct, clearCart } from '../../../context/cartSlice'
@@ -24,7 +23,7 @@ const CartWidget = () => {
         </div>
         {cartView ? 
         <ClickAwayListener onClickAway={handleCart}>
-          <div className='cartViewBox'>
+          <div className='cart-window-box'>
             <div className='cartView'>
               <h2 className='cartViewTitle'>Carrito de <span className='titleAccent'>Compras</span></h2>
               {cart.length > 0 ? 
@@ -34,9 +33,12 @@ const CartWidget = () => {
                       <div className='cartViewProduct' key={product.id}>
                           <img className='cartViewImg' src={product.image} alt={product.title}></img>
                           <div className='cartViewTextBox'>
-                            <p className='cartViewText'>{product.title}</p>
-                            <p className='cartViewText'>Precio: ${product.price}</p>
-                            <p className='cartViewText'>Cantidad: {product.quantity}</p>
+                            <p className='cart-view-product-title'>{product.title}</p>
+                            <span className='cart-product-price-box'>
+                              <p className='cart-view-product-price'>$ {product.price}</p>
+                              <FontAwesomeIcon icon={faXmark} className='quantity-icon'/>
+                              <p className='cart-view-product-quantity'>{product.quantity}</p>
+                            </span>
                           </div>
                           <span className='cartViewDeleteBtn' onClick={()=> dispatch(deleteProduct(product.id))}><FontAwesomeIcon icon={faXmark} /></span>
                       </div>
