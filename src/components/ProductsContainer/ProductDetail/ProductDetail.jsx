@@ -1,5 +1,8 @@
 import { useFetch } from './hooks/useFetch'
 import { useCounter } from './hooks/useCounter'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import "./styles.css"
 
 const ProductDetail = () => {
@@ -20,11 +23,11 @@ const {add, addQuantity, substract, quantity} = useCounter()
                         <button className='btn-counter' onClick={add}>+</button>
                 </div>
             </div>
-            {/* <p className='itemTitleDescription'>DESCRIPCIÓN</p> */}
             <p className='ietmDetailDescription'>{product.description}</p>
             <div className='counterBox'>
                 <button onClick={() => addQuantity(quantity, product)} className='link'>Agregar al carrito</button>
             </div>
+            {/* <Link to={'/'} className='bckBtn'><FontAwesomeIcon icon={faArrowLeft}/> Home</Link> */}
         </div>
     </div>
     )

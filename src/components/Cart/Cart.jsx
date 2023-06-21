@@ -10,7 +10,7 @@ const Cart = () => {
 
   return (
     <div className='cartBox'>
-        <h1 className='titleSection'>Carrito de <span className='titleAccent'>Compras</span></h1>
+        
         {cart.length > 0 ? 
         <div className='cartFormFlex'>
           <CartForm/>

@@ -3,12 +3,7 @@
   margin-bottom: 5%;
 }
 
-.titleSection{
-    margin-bottom: 2em;
-    margin-left: 7em;
-    font-size: 1.5em;
-    color: var(--black-clr);
-  }
+
   
   .titleAccent{
     color: var(--orange-clr);

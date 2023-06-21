@@ -1,34 +1,71 @@
-.checkOutInput{
-    width: 25em;
-    border: none;
-    border-bottom: 0.2rem solid #130f40;
-    border-width: .1rem;
-    font-size: .8em;
-    text-transform: none;
-    color: #130f40;
-    padding: 1.2rem 0;
-    margin: .5rem 0;
-    outline: none;
+.input-box{
+    position: relative;
+    margin: 1em 0em;
 }
 
 .contactInput{
+    padding: 1.5rem 0;
     width: 30em;
-    border: none;
-    border-bottom: 0.1rem solid #130f40;
+    border: 2px solid var(--light-bck);
+    border-radius: 5px;
     font-size: 1rem;
     text-transform: none;
-    color: #130f40;
-    padding: 1.5rem 0;
-    margin: 1rem 0;
+    color: var(--black-clr);
+    padding:  1em 1.20rem;
     outline: none;
-    resize: none;
+}
+
+.contactInput:focus{
+    border: 2px solid var(--orange-clr);
+}
+
+.contactInput:focus ~ .label,
+.contactInput:not(:placeholder-shown).contactInput:not(:focus) ~ .label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.9rem;
+  background-color: var(--white-clr);
+}
+
+.checkOutInput{
+    width: 20em;
+    border: 2px solid var(--light-bck);
+    border-radius: 5px;
+    font-size: .8em;
+    text-transform: none;
+    color: var(--black-clr);
+    padding:  1em 1.20rem;
+    /* margin: 1rem 0em; */
+    outline: none;
+}
+
+.checkOutInput:focus{
+  border: 2px solid var(--orange-clr);
+}
+
+
+.label{
+    font-size: .9em;
+    color: var(--light-clr);
+    position: absolute;
+    left: .8rem;
+    top: .7rem;
+    padding: 0 .3rem;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.checkOutInput:focus ~ .label,
+.checkOutInput:not(:placeholder-shown).checkOutInput:not(:focus) ~ .label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.9rem;
+  background-color: var(--white-clr);
 }
 
 .error-message{
     font-size: .8rem;
     color: red;
-    padding: 3px;
-    display: block;
+    margin-bottom: 1em;
     width: 300px;
     display: none;
 }
@@ -38,5 +75,5 @@ input:invalid[focused="true"] ~ .error-message{
 }
 
 input:invalid[focused="true"]{
-    border-bottom: 0.1rem solid red;
+    border: 2px solid red;
 }

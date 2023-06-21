@@ -19,7 +19,7 @@ const Product = ({data}) => {
         <div className='overlay'>
             <button className='overlay-btn'><FontAwesomeIcon icon={faHeart}/></button>
             <button className='overlay-btn' onClick={()=> addOneQuantity(data)}><FontAwesomeIcon icon={faCartShopping}/></button>
-            <button className='overlay-btn'><FontAwesomeIcon icon={faSearch}/></button>
+            <Link to={`/item/${data.id}`} className='overlay-btn'><FontAwesomeIcon icon={faSearch}/></Link>
         </div>
         <h3 className='itemTitle'>{data.title}</h3>
         <p className='itemCategory'>Categoria {capitalized(data.category)}</p>

@@ -35,10 +35,10 @@ const OrderSummary = () => {
               </span>
             </div>
             <span className='cartDeleteBtn' onClick={()=> dispatch(deleteProduct(product.id))}><FontAwesomeIcon icon={faXmark} /></span>
-            <div className='divider'></div> 
           </div>
         )})}
     </div>
+    <div className='divider'></div> 
     <div>
         <span className='fees-box'>
           <p>Productos</p>

@@ -1,19 +1,115 @@
+/* CHECK OUT SECTION */
+
 .checkOutBox{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.titleSection{
+  font-size: 1.5em;
+  color: var(--black-clr);
+  margin-left: 7%;
 }
 
 .checkOutForm{
-    display: flex;
-    flex-direction: column;
-    box-shadow: var(--boxShadow);
-    border-radius: 10px;
-    padding: 1.5em;
-    height: fit-content;
-    border: solid 2px var(--light-bck);
-    width: 80%;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2em;
 }
+
+/* SHIPPING SECTION */
+
+.shipping-section{
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--boxShadow);
+  border-radius: 10px;
+  padding: 1.5em;
+  height: fit-content;
+  border: solid 2px var(--light-bck);
+  width: 80%;
+ /*  margin: auto; */
+}
+
+.radio-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0em;
+}
+
+.radio-input-box{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+
+.radio-input{
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+}
+
+
+.input-icon-box{
+  border-radius: 10px;
+  border: 2px solid var(--light-bck);
+  height: 45px;
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-right: 1em;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.input-icon-box::after {
+  content: "";
+  border-radius: 10px;
+  height: 45px;
+  width: 50px;
+  border: 2px solid var(--black-clr);
+  display: block;
+  transition: .2s linear;
+  transform: scale(0);
+}
+
+
+
+.input-icon{
+  position: absolute;
+  font-size: 1.5em;
+  color: var(--black-clr);
+}
+
+.radio-input:checked + .input-icon-box::after{
+  transform: scale(1);
+}
+
+
+.payment-section{
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--boxShadow);
+  border-radius: 10px;
+  padding: 1.5em;
+  height: fit-content;
+  border: solid 2px var(--light-bck);
+  width: 80%;
+  /* margin: auto; */
+}
+
 
 .checkOutTittle{
     font-size: 1.1rem;
@@ -25,49 +121,26 @@
     color: var(--orange-clr);
 }
 
+
 .form-flex{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.checkOutInput{
-    width: 20em;
-    border: none;
-    border-bottom: 0.2rem solid #130f40;
-    border-width: .1rem;
-    font-size: .8em;
-    text-transform: none;
-    color: #130f40;
-    padding: 1.2rem 0;
-    margin: .5rem 0;
-    outline: none;
 }
 
 .btnsCheckOutBox{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 5.3em;
+    justify-content: center;
 }
 
-.cartDeleteAll{
-    color: var(--black-clr);
-    font-size: 1.5em;
-    cursor: pointer;
-    margin-top: .6em;
-  }
-
-  .cartDeleteAll:hover{
-    color: red;
-  }
 
 
-.cartTotal{
-    color: var(--black-clr);
-    font-size: 1.2em;
-    margin: 1em 0em 1em;
-    text-align: right;
-  }
+.backBtn{
+  color: var(--black-clr);
+  width: fit-content;
+  margin-left: 7.5%;
+}
+

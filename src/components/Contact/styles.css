@@ -16,31 +16,45 @@
     align-items: center;
 }
 
-.formInput{
+.msg-box{
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.msg-input{
+    padding: 1.5rem 0;
     width: 30em;
-    border: none;
-    border-bottom: 0.2rem solid #130f40;
-    border-width: .1rem;
+    border: 2px solid var(--light-bck);
+    border-radius: 5px;
     font-size: 1rem;
     text-transform: none;
-    color: #130f40;
-    padding: 1.5em 0;
+    color: var(--black-clr);
+    padding:  1em 1.20rem;
     outline: none;
     resize: none;
 }
 
-.msg-input{
-    width: 30em;
-    border: none;
-    border-bottom: 0.2rem solid #130f40;
-    border-width: .1rem;
-    font-size: 1rem;
-    text-transform: none;
-    color: #130f40;
-    padding: 1.5em 0;
-    outline: none;
-    resize: none;
-    margin-bottom: 1em;
+.msg-label{
+    font-size: .9em;
+    color: var(--light-clr);
+    position: absolute;
+    left: .8rem;
+    top: .7rem;
+    padding: 0 .3rem;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+    
+}
+
+.msg-input:focus{
+    border: 2px solid var(--orange-clr);
+}
+
+.msg-input:focus ~ .msg-label,
+.msg-input:not(:placeholder-shown).msg-input:not(:focus) ~ .msg-label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  left: 0.9rem;
+  background-color: var(--white-clr);
 }
 
 .contactFormBox{
