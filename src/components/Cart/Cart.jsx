@@ -10,7 +10,6 @@ const Cart = () => {
 
   return (
     <div className='cartBox'>
-        
         {cart.length > 0 ? 
         <div className='cartFormFlex'>
           <CartForm/>

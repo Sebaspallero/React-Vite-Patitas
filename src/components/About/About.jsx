@@ -4,14 +4,15 @@ import './styles.css'
 
 const About = () => {
   return (
-    <div className='about-box' id='nosotros'>
+    <section className='about-box' id='nosotros'>
         <img className='about-img' src={AboutImg} alt='imagen sobre nosotros'></img>
         <div className='about-info-box'>
-            <h2 className='section-title'>Sobre <span className='title-accent'>Nosotros</span></h2>
-            <p className='info-section'>Patitas es un servicio de comida para mascotas premium. Nuestros productos se basan en ofrecer alimentos organicos y libres de conservantes al mejor precio posible para nuestros clientes.</p>
+            <h2 className='section-title subtitle'>Sobre <span className='title-accent'>Nosotros</span></h2>
+            <p className='info-section text'>Patitas es un servicio de comida para mascotas premium. Nuestros productos se basan en ofrecer alimentos organicos y libres de conservantes al mejor precio posible para nuestros clientes.</p>
+            <img className='about-img-mobile' src={AboutImg} alt='imagen sobre nosotros'></img>
             <Button text="Conocer Más" href="https://github.com/Sebaspallero" target="_blank"/>
         </div>
-    </div>
+    </section>
   )
 }
 

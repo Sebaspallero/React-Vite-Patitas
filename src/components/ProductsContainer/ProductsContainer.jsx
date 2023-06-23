@@ -11,9 +11,9 @@ const ProductsContainer = () => {
         <h2 className='section-title'>Nuestros <span className='title-accent'>Productos</span></h2>
         <div className='category-selector-box'>
             {/* HACER COMPONENTE DE BOTON QUE SEA UN BUTTON Y ARREGLAR BOTONES DE FOOTER */}
-            <Link to='/' className='link btn-mrg'>TODO</Link>
-            <Link to='/categoria/perro' className='link btn-mrg'>PERROS <FontAwesomeIcon  icon={faDog}/></Link>
-            <Link to='/categoria/gato' className='link btn-mrg'>GATOS <FontAwesomeIcon  icon={faCat}/></Link>
+            <Link to='/' className='link btn-mrg text'>TODO</Link>
+            <Link to='/categoria/perro' className='link btn-mrg text'>PERROS <FontAwesomeIcon  icon={faDog}/></Link>
+            <Link to='/categoria/gato' className='link btn-mrg text'>GATOS <FontAwesomeIcon  icon={faCat}/></Link>
         </div>
         <ProductsList/>
     </section>

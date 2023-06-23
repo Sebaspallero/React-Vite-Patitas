@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark} from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faCaretDown} from '@fortawesome/free-solid-svg-icons'
 import { useSubmitCart } from '../CartForm/hooks/useSubmitCart'
 import { deleteProduct } from '../../../context/cartSlice'
 import { useDispatch } from 'react-redux'
@@ -19,6 +19,7 @@ const OrderSummary = () => {
         <h2 className='order-summary-title'>Tu <span>Orden</span></h2>
         <div className='ball-divider'></div>
         <p className='checkOutQuantity'>Productos {cart.length}</p>
+        <FontAwesomeIcon icon={faCaretDown} className='quantity-icon'/>
       </div>
     <div className='divider'></div>
     <div className='cart-products'>

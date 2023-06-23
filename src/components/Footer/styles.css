@@ -1,13 +1,35 @@
 .footerBox{
     background-color: var(--black-clr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.header-brand-name-white{
+    font-weight: 600;
+    color: var(--white-clr);
+    cursor: pointer;
+  }
+
+.menu-item-white{
+    color: var(--white-clr);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.menu-item-white:hover{
+    color: var(--orange-clr);
 }
 
 .socialBox{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    gap: 3em;
+    flex-wrap: wrap;
     align-items: center;
-    padding-bottom: 1.5em;
 }
 
 .socialItem{
@@ -61,4 +83,29 @@
     font-size: 1.3em;
 }
 
+.socialItem:hover .brandFooter{
+    color: var(--black-clr);
+}
+
+.disclaimer{
+    color: var(--white-clr);
+    margin: 0em 1em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.disclaimer a{
+    color: var(--orange-clr);
+}
+
+.menu-item-list-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0em 1em;
+  }
  

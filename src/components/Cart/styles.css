@@ -1,10 +1,8 @@
 .cartBox{
-  margin-top: 8%;
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 
-
-  
   .titleAccent{
     color: var(--orange-clr);
   }
@@ -28,5 +26,6 @@
     flex-direction: row;
     gap: 5%;
     align-items:flex-start;
+    margin-top: 5%;
   }
 

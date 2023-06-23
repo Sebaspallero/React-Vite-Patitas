@@ -12,7 +12,7 @@ function App () {
         <Header/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path='/categoria/:category' element={<Home/>}/> {/* FIJARSE COMO ADMNISTRAR BIEN LAS CATEGORIAS CON EL ROUTING Y ARREGLAR LAS VISTAS DEL ROUTING */}
+          <Route path='/categoria/:category' element={<Home/>}/> 
           <Route path='/item/:id' element={<ProductDetail/>}/>
           <Route path='/cart' element={<Cart/>}/>
         </Routes>

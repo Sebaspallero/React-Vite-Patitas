@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: flex-end;
     margin-top: 5%;
+    position: relative;
   }
 
   .greeting-box{
@@ -29,9 +30,37 @@
   
   .waves-hero{
     position: absolute;
-    bottom: -4.7em; left:0;
+    bottom: 0em;
     width: 100%;
-    height: 5rem;
+    height: 15%;
   }
 
+  @media (width <= 1080px){
+    .hero-box{
+      background-image: url(../../assets/heroImage-resize.jpg);
+      background-position:right right;
+      background-size: cover;
+      min-height: 40vh;
+      padding-top: 5%;
+    }
+
+    .greeting-box{
+      width: 40%;
+    }
+
+    .greeting-message{
+      font-size: 2rem;
+      color: var(--white-clr);
+      line-height: 1.5em;
+      text-transform: capitalize;
+    }
+  }
+
+  @media(width <= 560px){
+    .greeting-message{
+      font-size: 1.5rem;
+    }
+  }
+
+  
  

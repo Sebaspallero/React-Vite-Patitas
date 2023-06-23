@@ -8,10 +8,35 @@
   scroll-behavior: smooth;
   scroll-padding-top:4rem;
   margin: 0;
+  scrollbar-color: var(--orange-clr) rgba(255, 0, 0, 0);
+  scrollbar-width: thin;
+}
+
+/* Declare text styles */
+.text, .subtitle, .title {
+  /* Font minimum, preferred and maximum value */
+  font-size: clamp(var(--min), var(--val), var(--max));
+}
+
+/* Font size variables */
+.title {
+  --min: 2em; /* minimum value */
+  --val: 5vw; /* preferred value = 5% viewport width */
+  --max: 3em; /* maximum value */
+}
+.subtitle {
+  --min: 1.6em;   /* minimum value */
+  --val: 2vw;     /* preferred value = 4% viewport width */
+  --max: 2rem;  /* maximum value */
+}
+.text {
+  --min: .9em;   /* minimum value */
+  --val: 1.5vw; /* preferred value = 2.5% viewport width */
+  --max: 1em; /* maximum value */
 }
 
 :root {
-  --orange-clr: #e67e22;
+  --orange-clr: rgb(230, 126, 34);
   --black-clr: #130f40;
   --white-clr: #fff;
   --light-clr:#666;
@@ -38,7 +63,7 @@
 }
 
 .section-title{
-  font-size: 2em;
+  font-size: 1.7em;
   color: var(--black-clr);
   padding-bottom: 1.5em;
 }
@@ -53,7 +78,6 @@
   border-radius: 5rem;
   border-top-left-radius: 0rem;
   cursor: pointer;
-  font-size: 1rem;
   position: relative;
   overflow: hidden;
   /* width: fit-content; */

@@ -6,7 +6,7 @@
     border-radius: 10px;
     padding: 1.5em;
     margin-right: 5%;
-    margin-top: 4.9%;
+   
     border: solid 2px var(--light-bck);
     box-shadow: var(--boxShadow);
 }

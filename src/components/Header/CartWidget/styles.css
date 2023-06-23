@@ -54,26 +54,37 @@
 
   .cart-window-box{
     position: absolute;
-    top: -40%;
+    top: -60%;
     right: 2%;
     margin-top: 10em;
     background-color: var(--white-clr);
     width: 380px;
-    height: 350px;
+    max-height: 350px;
+    min-height: fit-content;
     border-radius: 10px;
     box-shadow: var(--boxShadow);
     color: var(--black-clr);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     overflow-y: scroll;
     overflow-x:hidden;
     border: solid 2px var(--light-bck);
   }
 
+  /* .cart-window-box.active{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: .2s ease;
+  }
+
+  .cart-window-box.inactive{
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(-20px);
+    transition: .2s ease;
+  } */
+
   .cartView{
     padding: 1.5em;
-    gap: 1em;
   }
 
   .cartViewProduct{
@@ -113,7 +124,8 @@
   }
 
   .cartMsgEmpty{
-    margin: 5em 4.5em 1em;
+    text-align: center;
+    margin: 4em 0em;
   }
 
   .cartViewDeleteAll{
