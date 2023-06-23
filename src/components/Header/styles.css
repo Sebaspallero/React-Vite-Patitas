@@ -56,7 +56,7 @@ nav{
     display: none;
   }
 
-  @media (width <= 800px){
+  @media (width <= 880px){
     .menu-item-list{
       gap: 2em;
     }

@@ -2,15 +2,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-top: 10%;
-    padding-bottom: 3%;
+    margin: 8em 5% 3em;
 }
 
 .itemDetailImg{
     height: 450px;
-    width: 350px;
+    width: 350px; 
     border-radius: 5px;
     margin-right: 3em;
+}
+
+.itemDetailImg-mobile{
+  display: none;
 }
 
 .ItemDetailTextBox{
@@ -18,12 +21,12 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 2em;
+    gap: .5em;
 }
 
 .itemDetailTitle{
     font-size: 1.1rem;
     color: var(--black-clr);
-    margin-bottom: 1em;
 }
 
 .itemDetailPrice{
@@ -34,13 +37,11 @@
 .itemTitleDescription{
   color: var(--black-clr);
   font-size: 1.1em;
-  margin-bottom: .5em;
 }
 
 .ietmDetailDescription{
     font-size: .9rem;
     color: var( --light-clr);
-    margin-bottom: .5em;
     max-width: 25em;
     text-align: justify;
 } 
@@ -50,12 +51,8 @@
   flex-direction: row;
   gap: 2em;
   align-items: center;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
 }
-
-.counterBox{
-    margin-top: 1.5em;
-  }
   
   .itemCounter{
     gap: 1em;
@@ -93,5 +90,43 @@
     margin-top: .5em;
   }
 
+
+  @media( width <= 820px){
+    .itemDetailImg{
+      height: 400px;
+      width: 300px; 
+      margin-right: 1em;
+    }
+
+  .ItemDetailTextBox{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+}
+
+@media(width <= 720px){
+  .itemDetailImg{
+   display: none;
+  }
+
+  .itemDetailImg-mobile{
+    display: block;
+    height: 300px;
+    width: 250px; 
+    border-radius: 5px;
+    margin-top: 2em;
+  }
+
+  .ItemDetailTextBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+}
   
 

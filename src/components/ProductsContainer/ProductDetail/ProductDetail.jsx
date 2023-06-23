@@ -12,7 +12,7 @@ const {add, addQuantity, substract, quantity} = useCounter()
 
   return (
     <div className='itemDetailBox'>
-        <img src={product.image} className='itemDetailImg' alt="Imagen de producto"></img>
+        <img src={product.image} className='itemDetailImg' alt={product.title}></img>
         <div className='ItemDetailTextBox'>
             <h2 className='itemDetailTitle'>{product.title}</h2>
             <div className='conter-price-box'>
@@ -23,11 +23,11 @@ const {add, addQuantity, substract, quantity} = useCounter()
                         <button className='btn-counter' onClick={add}>+</button>
                 </div>
             </div>
-            <p className='ietmDetailDescription'>{product.description}</p>
+            <p className='ietmDetailDescription text'>{product.description}</p>
+            <img src={product.image} className='itemDetailImg-mobile' alt={product.title}></img>
             <div className='counterBox'>
                 <button onClick={() => addQuantity(quantity, product)} className='link'>Agregar al carrito</button>
             </div>
-            {/* <Link to={'/'} className='bckBtn'><FontAwesomeIcon icon={faArrowLeft}/> Home</Link> */}
         </div>
     </div>
     )
