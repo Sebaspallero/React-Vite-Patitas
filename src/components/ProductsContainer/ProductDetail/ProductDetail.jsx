@@ -3,6 +3,7 @@ import { useCounter } from './hooks/useCounter'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+import {formatNumber} from '../../../shared/utils/formatPrice'
 import "./styles.css"
 
 const ProductDetail = () => {
@@ -16,7 +17,7 @@ const {add, addQuantity, substract, quantity} = useCounter()
         <div className='ItemDetailTextBox'>
             <h2 className='itemDetailTitle'>{product.title}</h2>
             <div className='conter-price-box'>
-                <p className='itemDetailPrice'>${product?.price?.toLocaleString() || ''}</p>
+                <p className='itemDetailPrice'>${product.price && formatNumber(product.price)}</p>
                 <div className='itemCounter'>
                         <button className='btn-counter' onClick={substract}>-</button>
                         <span className='quantity'>{quantity}</span>   

@@ -35,6 +35,10 @@
   --max: 1em; /* maximum value */
 }
 
+html{
+  width: fit-content;
+}
+
 :root {
   --orange-clr: rgb(230, 126, 34);
   --black-clr: #130f40;

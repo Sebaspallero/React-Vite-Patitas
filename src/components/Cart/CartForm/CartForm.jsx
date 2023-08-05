@@ -1,7 +1,7 @@
 import FormInput from '../../../shared/components/FormInput/FormInput';
 import { cartInputs } from '../../../shared/utils/inputs';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faMoneyBill, faCreditCard, faGlobe} from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faMoneyBill} from '@fortawesome/free-solid-svg-icons'
 import { useSubmitCart } from './hooks/useSubmitCart';
 import { Link } from 'react-router-dom';
 import './styles.css'
@@ -10,7 +10,8 @@ import './styles.css'
 const CartForm = () => {
 
   const inputs = cartInputs
-  const {handleOnChange, handleSubmit} = useSubmitCart()
+  const {handleOnChange, handleSubmit, preference} = useSubmitCart()
+
 
   return (
     <div className='checkOutBox'>
@@ -34,28 +35,18 @@ const CartForm = () => {
           <div className='payment-section'>
             <h2 className='checkOutTittle'>Información de <span className='checkOutTittleAccent'>Pago</span></h2>
             <div className='radio-box'>
-              <label className='radio-input-box' htmlFor="cash">
-                <input type="radio" id="cash" name="fav_language" value="cash" className='radio-input'/>
-                <div className='input-icon-box'><FontAwesomeIcon icon={faMoneyBill} className='input-icon'/></div>
-                Efectivo
-              </label>
-              <label className='radio-input-box' htmlFor="card">
-                <input type="radio" id="card" name="fav_language" value="cash" className='radio-input'/>
-                <div className='input-icon-box'><FontAwesomeIcon icon={faCreditCard} className='input-icon'/></div>
-                Tarjeta
-              </label>
-              <label className='radio-input-box' htmlFor="apple">
-                <input type="radio" id="apple" name="fav_language" value="cash" className='radio-input'/>
-                <div className='input-icon-box'><FontAwesomeIcon icon={faGlobe} className='input-icon'/></div>
-                Home Banking
-              </label>
+                <label className='radio-input-box' htmlFor="cash">
+                  <input type="radio" id="cash" name="fav_language" value="cash" className='radio-input' defaultChecked/>
+                  <div className='input-icon-box'><FontAwesomeIcon icon={faMoneyBill} className='input-icon'/></div>
+                  Mercado Pago
+                </label>
             </div>
             <div className='btnsCheckOutBox'>
-                <button type='submit' className='link' onClick={handleSubmit}>Confirmar Compra</button>
+              {preference ? <button className='link buy-btn' type='submit' onClick={handleSubmit}>Confirmar Compra</button> : <button className='link buy-btn'>Confirmar Compra</button>}
             </div>
           </div>
         </form>
-        <Link to={'/'} className='backBtn'><FontAwesomeIcon icon={faArrowLeft}/> Home</Link>
+        <Link to={'/'} className='backBtn'><FontAwesomeIcon icon={faArrowLeft}/> Home</Link>     
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { useSubmitCart } from '../CartForm/hooks/useSubmitCart'
 import { deleteProduct } from '../../../context/cartSlice'
 import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
+import { formatNumber } from '../../../shared/utils/formatPrice'
 import './styles.css'
 
 const OrderSummary = () => {
@@ -12,6 +13,7 @@ const OrderSummary = () => {
   const dispatch = useDispatch()
   const cart = useSelector((state) => state.cart.cart)
   const shipping = 800
+  const subtotal = total + shipping
 
   return (
     <div className='order-summary-box'>
@@ -30,7 +32,7 @@ const OrderSummary = () => {
             <div className='cart-product-info'>
               <p className='cart-product-title'>{product.title}</p>
               <span className='cart-product-price-box'>
-                <p className='cart-product-price'>$ {product.price}</p>
+                <p className='cart-product-price'>$ {formatNumber(product.price)}</p>
                 <FontAwesomeIcon icon={faXmark} className='quantity-icon'/>
                 <p className='cart-product-quantity'>{product.quantity}</p>
               </span>
@@ -43,14 +45,14 @@ const OrderSummary = () => {
     <div>
         <span className='fees-box'>
           <p>Productos</p>
-          <p>${total}</p>
+          <p>${formatNumber(total)}</p>
         </span>
         <span className='fees-box'>
           <p>Envio</p>
-          <p>${shipping}</p>
+          <p>${formatNumber(shipping)}</p>
         </span>
         <div className='divider'></div> 
-          <p className='cartTotal'>Total: ${total + shipping}</p>
+          <p className='cartTotal'>Total: ${formatNumber(subtotal)}</p>
         </div>
     </div>
   )

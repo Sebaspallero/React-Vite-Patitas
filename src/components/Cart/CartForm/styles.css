@@ -130,13 +130,9 @@
   flex-wrap: wrap;
 }
 
-.btnsCheckOutBox{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+.buy-btn{
+  width: 100%;
 }
-
-
 
 .backBtn{
   color: var(--black-clr);

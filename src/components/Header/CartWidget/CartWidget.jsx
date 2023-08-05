@@ -5,6 +5,7 @@ import { UseHandleCart } from './hooks/useHandleCart'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { deleteProduct, clearCart } from '../../../context/cartSlice'
+import { formatNumber } from '../../../shared/utils/formatPrice'
 
 import { ClickAwayListener } from '@mui/base'
 import './styles.css'
@@ -35,7 +36,7 @@ const CartWidget = () => {
                           <div className='cartViewTextBox'>
                             <p className='cart-view-product-title'>{product.title}</p>
                             <span className='cart-product-price-box'>
-                              <p className='cart-view-product-price'>$ {product.price}</p>
+                              <p className='cart-view-product-price'>$ {formatNumber(product.price)}</p>
                               <FontAwesomeIcon icon={faXmark} className='quantity-icon'/>
                               <p className='cart-view-product-quantity'>{product.quantity}</p>
                             </span>
@@ -43,7 +44,7 @@ const CartWidget = () => {
                           <span className='cartViewDeleteBtn' onClick={()=> dispatch(deleteProduct(product.id))}><FontAwesomeIcon icon={faXmark} /></span>
                       </div>
                       )})}
-                      <p style={{marginBottom:'30px'}}>Total: ${total}</p>
+                      <p style={{marginBottom:'30px'}}>Total: ${formatNumber(total)}</p>
                       <Link to={'/cart'} className='link' onClick={handleCart}>Finalizar Compra</Link>
                       <FontAwesomeIcon onClick={()=>dispatch(clearCart())} className='cartViewDeleteAll' icon={faTrash} />
                 </div>

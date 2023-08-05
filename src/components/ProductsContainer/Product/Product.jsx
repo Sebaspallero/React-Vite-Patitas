@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
 import { faHeart, faCartShopping, faSearch} from '@fortawesome/free-solid-svg-icons'
 import { useCounter } from '../ProductDetail/hooks/useCounter'
+import {formatNumber} from '../../../shared/utils/formatPrice'
 import './styles.css'
 
 const Product = ({data}) => {
@@ -23,7 +24,7 @@ const Product = ({data}) => {
         </div>
         <h3 className='itemTitle'>{data.title}</h3>
         <p className='itemCategory'>Categoria {capitalized(data.category)}</p>
-        <p className='itemPrice'>${data.price}</p>
+        <p className='itemPrice'>${formatNumber(data.price)}</p>
     </div>
   )
 }
