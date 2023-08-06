@@ -10,10 +10,10 @@ app.use(cors())
 const PORT = 8080
 
 mercadopago.configure({
-    access_token: process.env.TEST_ACCESS_TOKEN
+    access_token: process.env.VITE_TEST_ACCESS_TOKEN
 })
 
-const MERCADO_PAGO_ACCESS_TOKEN = process.env.TEST_ACCESS_TOKEN
+const MERCADO_PAGO_ACCESS_TOKEN = process.env.VITE_TEST_ACCESS_TOKEN
 
 app.post('/crear-preferencia', async (req, res) => {
     try {

@@ -14,7 +14,7 @@ export const useSubmitCart = () =>{
     const dispatch = useDispatch()
 
     const url = 'https://api.mercadopago.com/checkout/preferences';
-    const TEST_ACCESS_TOKEN= process.env.TEST_ACCESS_TOKEN
+    const TEST_ACCESS_TOKEN= import.meta.env.VITE_TEST_ACCESS_TOKEN;
     const [preference, setPreference] = useState(null)
 
     const products = cart.map(product => ({
