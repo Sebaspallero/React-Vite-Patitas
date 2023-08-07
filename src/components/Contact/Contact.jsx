@@ -37,7 +37,7 @@ const Contact = () => {
               </textarea>
               <label className="msg-label" htmlFor='textarea'>Su Mensaje</label>
               </div>
-              <button className='link' onClick={handleSubmit}>Enviar Mensaje</button>
+              <button className='link-lg' onClick={handleSubmit}>Enviar Mensaje</button>
                 {succes ?
                 <Snackbar open={open} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: 'bottom', horizontal: 'right'}}>
                 <MuiAlert icon={false} sx={{ 

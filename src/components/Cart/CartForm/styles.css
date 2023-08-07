@@ -130,10 +130,6 @@
   flex-wrap: wrap;
 }
 
-.buy-btn{
-  width: 100%;
-}
-
 .backBtn{
   color: var(--black-clr);
   width: fit-content;

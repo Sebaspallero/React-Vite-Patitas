@@ -35,9 +35,9 @@
   --max: 1em; /* maximum value */
 }
 
-html{
+/* html{
   width: fit-content;
-}
+} */
 
 :root {
   --orange-clr: rgb(230, 126, 34);
@@ -84,11 +84,26 @@ html{
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  /* width: fit-content; */
+  width: fit-content;
+  border: var(--border);
+  color: var(--black-clr);
+  background: linear-gradient(to right, var(--black-clr) 50%, rgba(255,0,0,0) 50%);
+  background-size: 200% 90%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+}
+
+.link-lg{
+  margin-top: 1rem;
+  padding: .6rem 2rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
   width: 100%;
   border: var(--border);
   color: var(--black-clr);
-
   background: linear-gradient(to right, var(--black-clr) 50%, rgba(255,0,0,0) 50%);
   background-size: 200% 90%;
   background-position: right bottom;
@@ -96,6 +111,11 @@ html{
 }
 
 .link:hover{
+  color: var(--light-bck);
+  background-position: left bottom;
+}
+
+.link-lg:hover{
   color: var(--light-bck);
   background-position: left bottom;
 }

@@ -42,7 +42,7 @@ const CartForm = () => {
                 </label>
             </div>
             <div className='btnsCheckOutBox'>
-              {preference ? <button className='link buy-btn' type='submit' onClick={handleSubmit}>Confirmar Compra</button> : <button className='link buy-btn'>Confirmar Compra</button>}
+              {preference ? <button className='link-lg' type='submit' onClick={handleSubmit}>Confirmar Compra</button> : <button className='link buy-btn'>Confirmar Compra</button>}
             </div>
           </div>
         </form>
